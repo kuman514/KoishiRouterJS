@@ -18,27 +18,23 @@ export default class App extends Component {
       }).then((data) => {
         const list = new List({}, {items: data});
         list.rootElement.addEventListener('click', (event) => {
-          const elements = event.target.ownerDocument.all;
-          for (let i = elements.length - 1; i >= 0; i--) {
-            if (elements[i].className === 'list-item') {
-              const id = parseInt(elements[i].id);
+          const listItem = event.target.closest('.list-item');
+          if (listItem) {
+            const id = parseInt(listItem.id);
 
-              // Vanilla JS Routing Used ================
-              window.history.pushState(
-                {
-                  articleId: id,
-                  mode: 'read'
-                },
-                `Read Article ${id}`,
-                `/article/${id}`
-              );
-              this.setState({
+            // Vanilla JS Routing Used ================
+            window.history.pushState(
+              {
+                articleId: id,
                 mode: 'read'
-              });
-              // ========================================
-
-              break;
-            }
+              },
+              `Read Article ${id}`,
+              `/article/${id}`
+            );
+            this.setState({
+              mode: 'read'
+            });
+            // ========================================
           }
         });
         this.rootElement.appendChild(list.rootElement);

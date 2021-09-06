@@ -11,6 +11,7 @@ export default class ListItem extends Component {
       this.rootElement.id = this.props.id;
 
       const img = document.createElement('img');
+      img.className = 'thumbnail';
       img.src = `../img/${this.props.thumbnail}`;
 
       const title = document.createElement('span');
