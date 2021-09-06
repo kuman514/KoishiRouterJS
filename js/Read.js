@@ -13,7 +13,7 @@ export default class Read extends Component {
     }
 
     this.createParsedElement = (code, value) => {
-      console.log(code, value);
+      //console.log(code, value);
       switch (code) {
         case 'br':
           return document.createElement('br');
@@ -41,7 +41,7 @@ export default class Read extends Component {
             p.appendChild(this.createNormalElement(item));
           } else {
             const [parsedObject, normal] = item.split('}');
-            console.log(parsedObject, normal);
+            //console.log(parsedObject, normal);
             p.appendChild(this.createParsedElement(...parsedObject.split(',')));
             p.appendChild(this.createNormalElement(normal));
           }
