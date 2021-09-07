@@ -25,6 +25,11 @@ export default class Read extends Component {
           const yt = document.createElement('embed');
           yt.src = `https://www.youtube.com/embed/${value}`;
           return yt;
+        case 'h2':
+          const h2 = document.createElement('h2');
+          const textForH2 = this.createNormalElement(value);
+          h2.appendChild(textForH2);
+          return h2;
       }
     }
 
