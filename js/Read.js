@@ -19,7 +19,7 @@ export default class Read extends Component {
           return document.createElement('br');
         case 'img':
           const image = document.createElement('img');
-          image.src = `img/${value}`;
+          image.src = `../img/${value}`;
           return image;
         case 'youtube':
           const yt = document.createElement('embed');
