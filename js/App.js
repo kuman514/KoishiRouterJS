@@ -42,7 +42,7 @@ export default class App extends Component {
     };
 
     this.getAndRenderRead = (articleId) => {
-      fetch(`../content/${articleId}.json`).then((response) => {
+      fetch(`content/${articleId}.json`).then((response) => {
         if (response.ok) {
           return response.json();
         }

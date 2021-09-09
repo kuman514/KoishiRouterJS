@@ -12,7 +12,7 @@ export default class ListItem extends Component {
 
       const img = document.createElement('img');
       img.className = 'thumbnail';
-      img.src = `../img/${this.props.thumbnail}`;
+      img.src = `img/${this.props.thumbnail}`;
 
       const title = document.createElement('span');
       title.textContent = this.props.title;
