@@ -11,7 +11,7 @@ export default class App extends Component {
     this.rootElement = document.createElement('main');
 
     this.getAndRenderMain = () => {
-      fetch('../content/list.json').then((response) => {
+      fetch('content/list.json').then((response) => {
         if (response.ok) {
           return response.json();
         }
