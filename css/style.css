@@ -1,8 +1,55 @@
-.list > ul {
+.list {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list > ul {
+  all: unset;
+  padding: 20px;
+  display: grid;
+}
+
+@media (min-width: 1000px) {
+  .list > ul {
+    grid-template-columns: 250px 250px 250px 250px;
+  }
+}
+
+@media (min-width: 750px) and (max-width: 999px) {
+  .list > ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 749px) {
+  .list > ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 499px) {
+  .list > ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: solid 1px gray;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: lemonchiffon;
+}
+
+.list-item:hover {
+  cursor: pointer;
+  background-color: lightgreen;
 }
 
 .list-item > .thumbnail {
-  width: 200px;
+  height: 200px;
 }
