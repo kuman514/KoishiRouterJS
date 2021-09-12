@@ -53,6 +53,14 @@ export default class Read extends Component {
       title.textContent = this.props.title;
       this.rootElement.appendChild(title);
 
+      const bookmarkButton = document.createElement('button');
+      bookmarkButton.className = 'bookmark-button';
+      bookmarkButton.textContent = '북마크하기';
+      bookmarkButton.addEventListener('click', () => {
+        this.props.onBookmark();
+      });
+      this.rootElement.appendChild(bookmarkButton);
+
       this.props.content.forEach((paragraph) => {
         const p = document.createElement('p');
 
