@@ -19,7 +19,7 @@ export default class Read extends Component {
           return document.createElement('br');
         case 'img':
           const image = document.createElement('img');
-          image.src = `../img/${value}`;
+          image.src = (value.indexOf('http') !== -1) ? value : `../img/${value}`;
           return image;
         case 'youtube':
           const yt = document.createElement('embed');
@@ -30,6 +30,21 @@ export default class Read extends Component {
           const textForH2 = this.createNormalElement(value);
           h2.appendChild(textForH2);
           return h2;
+        case 'anchor':
+          const a = document.createElement('a');
+          const data = value.split('@');
+          a.target = '_blank';
+          switch (data.length) {
+            case 2:
+              a.href = data[1];
+              a.appendChild(this.createNormalElement(data[0]));
+              break;
+            case 3:
+              a.href = data[2];
+              a.appendChild(this.createParsedElement(data[0], data[1]));
+              break;
+          }
+          return a;
       }
     }
 
