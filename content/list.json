@@ -2,17 +2,17 @@
   {
     "id": 1,
     "title": "Paranoia The Best - 7th Anniversary",
-    "thumbnail": "1.jpg"
+    "thumbnail": "@/1.jpg"
   },
   {
     "id": 2,
     "title": "코이시가 누구인가요?",
-    "thumbnail": "145koishi.png"
+    "thumbnail": "@/145koishi.png"
   },
   {
     "id": 3,
     "title": "원작에서의 코이시는?",
-    "thumbnail": "11koishi.png"
+    "thumbnail": "@/11koishi.png"
   },
   {
     "id": 4,

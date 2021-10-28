@@ -12,7 +12,7 @@ export default class ListItem extends Component {
 
       const img = document.createElement('img');
       img.className = 'thumbnail';
-      img.src = (this.props.thumbnail.indexOf('http') !== -1) ? this.props.thumbnail : `https://kuman514.github.io/KoishiRouterJS/img/${this.props.thumbnail}`;
+      img.src = (this.props.thumbnail[0] !== '@') ? this.props.thumbnail : `https://kuman514.github.io/KoishiRouterJS/img/${this.props.thumbnail.split('@/')[1]}`;
 
       const title = document.createElement('span');
       title.textContent = this.props.title;
