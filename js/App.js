@@ -27,8 +27,6 @@ export default class App extends Component {
       this.bookmarks = JSON.parse(this.bookmarks);
     }
 
-    console.log(this.bookmarks);
-
     this.getAndRenderMain = () => {
       const bookmarkButton = document.createElement('button');
       bookmarkButton.className = 'bookmark-button';
