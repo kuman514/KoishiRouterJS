@@ -38,7 +38,7 @@ export default class App extends Component {
             mode: 'bookmark'
           },
           `bookmark`,
-          `/bookmark`
+          `bookmark`
         );
         this.setState({
           mode: 'bookmark'
